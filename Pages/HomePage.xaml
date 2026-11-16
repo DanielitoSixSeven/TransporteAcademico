@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TransporteAcademico.Pages.HomePage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="{StaticResource Primary}">
+
+    <Grid RowDefinitions="230,*">
+
+        <VerticalStackLayout Grid.Row="0" Spacing="4"
+                             VerticalOptions="Center" HorizontalOptions="Center">
+            <Label Text="🚌🎓" FontSize="64" HorizontalOptions="Center" />
+            <Label Text="Transporte Académico"
+                   FontSize="26" FontAttributes="Bold"
+                   TextColor="White" HorizontalOptions="Center" />
+            <Label Text="Tu ruta, nuestra prioridad"
+                   FontSize="13" TextColor="#D9D0FF"
+                   HorizontalOptions="Center" />
+        </VerticalStackLayout>
+
+        <Border Grid.Row="1"
+                BackgroundColor="#F6F4FB"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 30,30,0,0">
+
+            <ScrollView>
+                <VerticalStackLayout Padding="20" Spacing="18">
+
+                    <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto"
+                          ColumnSpacing="14" RowSpacing="14">
+
+                        <Border Grid.Row="0" Grid.Column="0" Style="{StaticResource MenuCard}">
+                            <VerticalStackLayout VerticalOptions="Center" Spacing="6">
+                                <Label Text="📍" Style="{StaticResource MenuIcon}" />
+                                <Label Text="Rutas" Style="{StaticResource MenuText}" />
+                            </VerticalStackLayout>
+                        </Border>
+
+                        <Border Grid.Row="0" Grid.Column="1" Style="{StaticResource MenuCard}">
+                            <VerticalStackLayout VerticalOptions="Center" Spacing="6">
+                                <Label Text="📅" Style="{StaticResource MenuIcon}" />
+                                <Label Text="Horarios" Style="{StaticResource MenuText}" />
+                            </VerticalStackLayout>
+                        </Border>
+
+                        <Border Grid.Row="1" Grid.Column="0" Style="{StaticResource MenuCard}">
+                            <VerticalStackLayout VerticalOptions="Center" Spacing="6">
+                                <Label Text="🚍" Style="{StaticResource MenuIcon}" />
+                                <Label Text="Servicios" Style="{StaticResource MenuText}" />
+                            </VerticalStackLayout>
+                        </Border>
+
+                        <Border Grid.Row="1" Grid.Column="1" Style="{StaticResource MenuCard}">
+                            <VerticalStackLayout VerticalOptions="Center" Spacing="6">
+                                <Label Text="🔔" Style="{StaticResource MenuIcon}" />
+                                <Label Text="Notificaciones" Style="{StaticResource MenuText}" />
+                            </VerticalStackLayout>
+                        </Border>
+                    </Grid>
+
+                    <!-- ===== 6.2 Banner "Viaja informado" ===== -->
+                    <Border BackgroundColor="#E3DCF9" StrokeThickness="0"
+                            StrokeShape="RoundRectangle 16" Padding="16,18">
+                        <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="12">
+                            <Label Grid.Column="0" Text="📢" FontSize="28" VerticalOptions="Center" />
+                            <Label Grid.Column="1" VerticalOptions="Center"
+                                   Text="Viaja informado,&#10;llega a tiempo"
+                                   FontSize="17" FontAttributes="Bold"
+                                   TextColor="{StaticResource TextDark}" />
+                            <Label Grid.Column="2" Text="›" FontSize="28"
+                                   TextColor="{StaticResource Primary}" VerticalOptions="Center" />
+                        </Grid>
+                    </Border>
+
+                    <VerticalStackLayout Spacing="10">
+
+                        <Grid ColumnDefinitions="*,Auto">
+                            <Label Text="🚌  Próximo bus" FontSize="17" FontAttributes="Bold"
+                                   TextColor="{StaticResource TextDark}" />
+                            <Label Grid.Column="1" Text="Ver más ›" FontSize="14"
+                                   TextColor="{StaticResource Primary}" FontAttributes="Bold" />
+                        </Grid>
+
+                        <Border BackgroundColor="White" StrokeThickness="1" Stroke="#E6E1F5"
+                                StrokeShape="RoundRectangle 14" Padding="16">
+                            <VerticalStackLayout Spacing="8">
+
+                                <HorizontalStackLayout Spacing="8">
+                                    <Ellipse Fill="{StaticResource DotOrange}"
+                                             WidthRequest="10" HeightRequest="10"
+                                             VerticalOptions="Center" />
+                                    <Label Text="Línea 1 - Campus Central" FontSize="15"
+                                           FontAttributes="Bold"
+                                           TextColor="{StaticResource TextDark}" />
+                                </HorizontalStackLayout>
+
+                                <HorizontalStackLayout Spacing="8">
+                                    <Ellipse Fill="{StaticResource DotGreen}"
+                                             WidthRequest="10" HeightRequest="10"
+                                             VerticalOptions="Center" />
+                                    <Label Text="Llegada estimada: 2 min" FontSize="14"
+                                           TextColor="Gray" />
+                                </HorizontalStackLayout>
+
+                            </VerticalStackLayout>
+                        </Border>
+                    </VerticalStackLayout>
+
+                </VerticalStackLayout>
+            </ScrollView>
+        </Border>
+    </Grid>
+</ContentPage>

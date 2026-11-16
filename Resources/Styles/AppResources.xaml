@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!-- ========== COLORES ========== -->
+    <Color x:Key="Primary">#5B3FD0</Color>
+    <Color x:Key="PrimaryDark">#4527A0</Color>
+    <Color x:Key="CardLight">#EEEAFB</Color>
+    <Color x:Key="TextDark">#1F1A3D</Color>
+    <Color x:Key="DotOrange">#F5A623</Color>
+    <Color x:Key="DotGreen">#2ECC71</Color>
+
+    <!-- ========== ESTILOS ========== -->
+
+    <!-- Tarjeta cuadrada del menú (Rutas, Horarios...) -->
+    <Style x:Key="MenuCard" TargetType="Border">
+        <Setter Property="BackgroundColor" Value="{StaticResource CardLight}" />
+        <Setter Property="StrokeThickness" Value="0" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 20" />
+        <Setter Property="HeightRequest" Value="110" />
+    </Style>
+
+    <Style x:Key="MenuIcon" TargetType="Label">
+        <Setter Property="FontSize" Value="30" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+    </Style>
+
+    <Style x:Key="MenuText" TargetType="Label">
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="{StaticResource TextDark}" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+    </Style>
+
+</ResourceDictionary>
